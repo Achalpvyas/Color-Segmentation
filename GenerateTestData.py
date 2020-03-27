@@ -42,7 +42,8 @@ import matplotlib.image as mpimg
 
 
 def saveCroppedImage(croppedImage):
-    cv2.imwrite("green/green" + str(count) + "_test.jpg", croppedImage)
+    # cv2.imwrite("testData/green/green" + str(count) + "_test.jpg", croppedImage)
+    cv2.imwrite("testData/orange/orange" + str(count) + "_test.jpg", croppedImage)
 
 
 def croppedImage(frame, center, radius):
