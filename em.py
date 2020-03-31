@@ -3,7 +3,7 @@ import math
 import matplotlib.pyplot as plt
 
 def gaussian(x,u,cov):
-    coeff = 1.0/math.sqrt(((2*math.pi)**3)*abs(cov))
+    coeff = 1.0/math.sqrt(((2*math.pi)**3)*cov)
     val = coeff*np.exp(-(x-u)**2/(2*cov))
     return val
 
@@ -14,12 +14,13 @@ def EM(data,numClusters = 3):
     ########################################################
     u = np.random.choice(data,(numClusters,1))   #initializing means
     # cov = np.random.choice((1,5),3)              #initializing covariance Matrix
-    cov = [1]*numClusters
+    cov = [1.2]*numClusters
     Pc_x = np.zeros((len(data),numClusters))     #Initializing probability of c given x
     Pc = [1/numClusters]*numClusters             #probabilities of clusters
+    logLikelihood = []
     
 
-    for iter in range(100):
+    for iter in range(1000):
         #######################################################
         #           E Step
         #######################################################
@@ -43,7 +44,13 @@ def EM(data,numClusters = 3):
         #Variance
         for i in range(numClusters):
             cov[i]= np.dot((Pc_x[:,i]*(data-u[i])).T,data-u[i])/m_c[i]
-   
+
+        
+        logLikelihood.append(np.sum(np.log(normalize)))
+        if(len(logLikelihood)>=2):
+            if(abs(logLikelihood[-1] - logLikelihood[-2] < 0.001)):
+                break
+            
     return u,np.sqrt(cov)
 
 
