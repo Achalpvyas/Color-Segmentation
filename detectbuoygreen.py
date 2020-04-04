@@ -33,7 +33,6 @@ def accessTrainingData(path):
 
 def detectBuoy(image, mean, sd, weights, clusters):
     images = []
-    test_image = image
     data = image[:, :, 1].ravel()
 
     Pc_x = np.zeros((len(data), clusters))
@@ -46,7 +45,7 @@ def detectBuoy(image, mean, sd, weights, clusters):
     combinedPc_x = np.reshape(Pc_x.sum(1), len(data))
 
     combinedPc_x = np.reshape(combinedPc_x, (image.shape[0], image.shape[1]))
-    combinedPc_x[combinedPc_x > np.max(combinedPc_x) / 2] = 255
+    combinedPc_x[combinedPc_x > np.max(combinedPc_x) / 1.8] = 255
     output = np.zeros_like(image)
     output[:, :, 1] = combinedPc_x
     blur = cv2.medianBlur(output, 3)
@@ -56,13 +55,13 @@ def detectBuoy(image, mean, sd, weights, clusters):
     (cnts_sorted, boundingBoxes) = contours.sort_contours(cont, method="right-to-left")
     hull = cv2.convexHull(cnts_sorted[0])
     (x, y), radius = cv2.minEnclosingCircle(hull)
-    if radius > 7:
-        cv2.circle(test_image, (int(x), int(y) - 1), int(radius + 1), (0, 0, 0), 4)
-        cv2.imshow("Final output", test_image)
-        images.append(test_image)
+    if radius > 3:
+        cv2.circle(image, (int(x), int(y) - 1), int(radius + 1), (0, 255, 0), 4)
+        cv2.imshow("Detecting Green buoy", image)
+        images.append(image)
     else:
-        cv2.imshow("Final output", test_image)
-        images.append(test_image)
+        cv2.imshow("Detecting Green buoy", image)
+        images.append(image)
     return images
 
 

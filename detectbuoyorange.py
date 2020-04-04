@@ -22,7 +22,7 @@ def accessTrainingData(path):
         # Plotting histogram to determine number of
         # gaussian distributions required
         # if count == 0:
-        gaussianRequired(croppedImage)
+        # gaussianRequired(croppedImage)
         # count += 1
         # channels.append(croppedImage[:, :, 0])
         # channels.append(croppedImage[:, :, 1])
@@ -60,7 +60,7 @@ def detectBuoy(image, mean, sd, weights, clusters):
         # print(radius)
         if radius > 3.5:
 
-            cv2.circle(image, (int(x), int(y) - 1), int(15), (0, 0, 0), 4)
+            cv2.circle(image, (int(x), int(y) - 1), int(radius + 1), (95, 174, 246), 4)
 
             cv2.imshow("Orange Buoy Detection", image)
             images.append(image)

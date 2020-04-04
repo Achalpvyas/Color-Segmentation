@@ -73,7 +73,7 @@ def detectBuoy(image, mean, sd, weights, clusters):
         (x, y), radius = cv2.minEnclosingCircle(hull)
         # print(radius)
         if radius > 7:
-            cv2.circle(image, (int(x), int(y) - 1), int(radius + 1), (0,0,0), 4)
+            cv2.circle(image, (int(x), int(y) - 1), int(radius + 1), (0 , 255, 255), 4)
             cv2.imshow("Detecting yellow buoy", image)
             images.append(image)
         else:
