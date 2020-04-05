@@ -7,3 +7,10 @@ In this project, I have implemented an approach for robust color segmentation wh
 * Tested on: Kubuntu 16.04.3, Intel i5-4200U (4) @ 2.600GHz 4GB
 * Python 2.7, OpenCV 3.2
 
+# Expectation-Maximization Algorithm
+The expectation maximization algorithm is used to find out the mean, variances and weights in the of the different Gaussian Models that represent the red barrels in the training images.
+
+The GMM is represented by -
+
+![](images/formula.png)
+
