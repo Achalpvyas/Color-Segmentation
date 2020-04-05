@@ -11,7 +11,6 @@ In this project, I have implemented an approach for robust color segmentation wh
 The expectation maximization algorithm is used to find out the mean, variances and weights in the of the different Gaussian Models that represent the byots in the training images.
 
 The GMM is represented by -
-
-![](images/formula.png)
+[](images/formula.png)
 
 
