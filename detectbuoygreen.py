@@ -81,7 +81,7 @@ while cap.isOpened():
     output = detectBuoy(frame, mean, sd, weights, clusters)
     for image in output:
         out.write(image)
-    if cv2.waitKey(50) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
 out.release()
