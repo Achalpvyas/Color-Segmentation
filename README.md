@@ -14,4 +14,4 @@ The GMM is represented by -
 
 ![](images/formula.png)
 
-|
+
