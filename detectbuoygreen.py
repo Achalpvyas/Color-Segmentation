@@ -73,7 +73,7 @@ mean, sd, weights = EM(greenData, clusters)
 # Reading and writing  Video
 cap = cv2.VideoCapture('detectbuoy.avi')
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('detectbuoygreen.avi', fourcc, 5.0, (640, 480))
+out = cv2.VideoWriter('detectbuoygreen.avi', fourcc, 15.0, (640, 480))
 while cap.isOpened():
     ret, frame = cap.read()
     if not ret:
