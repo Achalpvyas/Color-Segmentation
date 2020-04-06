@@ -13,3 +13,6 @@ The expectation maximization algorithm is used to find out the mean, variances a
 <div src="https://imgflip.com/embed/3vnkfz"></iframe></div><p><a href="https://imgflip.com/gif/3vnkfz">via Imgflip</a></p></div>
 
 <div style="width:360px;max-width:100%;"><div style="height:0;padding-bottom:75%;position:relative;"><iframe width="360" height="270" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/3vnkz9"></iframe></div><p><a href="https://imgflip.com/gif/3vnkz9">via Imgflip</a></p></div>
+
+
+![3vnkz9](https://user-images.githubusercontent.com/55011289/78615701-3a535000-7840-11ea-8ae6-ae6d87a3639f.gif)
