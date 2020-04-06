@@ -7,7 +7,7 @@ In this project, we have implemented an approach for robust color segmentation w
 * Python 2.7, OpenCV 3.2
 
 # Expectation-Maximization Algorithm
-The expectation maximization algorithm is used to find out the mean, variances and weights in the of the different Gaussian Models that represent the byots in the training images.
+The expectation maximization algorithm is used to find out the mean, variances and weights in the of the different Gaussian Models that represent the buoys in the training images.
 
 
 
