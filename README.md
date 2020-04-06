@@ -9,7 +9,5 @@ In this project, we have implemented an approach for robust color segmentation w
 # Expectation-Maximization Algorithm
 The expectation maximization algorithm is used to find out the mean, variances and weights in the of the different Gaussian Models that represent the buoys in the training images.
 
-
-
-#Result:
+# Result:
 <div style="width:360px;max-width:100%;"><div style="height:0;padding-bottom:75%;position:relative;"><iframe width="360" height="270" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/3vnkfz"></iframe></div><p><a href="https://imgflip.com/gif/3vnkfz">via Imgflip</a></p></div>
