@@ -9,6 +9,21 @@ In this project, we have implemented an approach for robust color segmentation w
 # Expectation-Maximization Algorithm
 The expectation maximization algorithm is used to find out the mean, variances and weights in the of the different Gaussian Models that represent the buoys in the training images.
 
+
+### Run the code
+
+Enter the following to run the code.
+
+```
+python3 
+em.py
+detectbuoygreen.py
+detectbuoyorange.py
+detectbuoyyellow.py
+mulgaussiandetect.py
+```
+
+
 # Result:
 
 Output video showing detection of green buoys.
