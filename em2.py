@@ -39,52 +39,59 @@ def EM(data, numClusters=3):
     ########################################################
     #           initialization step
     ########################################################
-    _,dim= data.shape 
+    _,channel= data.shape 
 
-    cov = np.zeros((numClusters,dim,dim))                                   #initializing covariance matrix
+    cov = np.zeros((numClusters,channel,channel))                               #initializing covariance matrix
     for i in range(numClusters):
         np.fill_diagonal(cov[i],np.random.randint(2,10))  
     
 
-    u = np.random.randint(min(data[:,0]),max(data[:,0]),(numClusters,dim))  # initializing means
-    Pc = [1 / numClusters] * numClusters            # probabilities of clusters
-    Pc_x = np.zeros((len(data), numClusters))   # Initializing probability of c given x
+    u = np.random.randint(min(data[:,0]),max(data[:,0]),(numClusters,channel)).astype(float)  #initializing means
+    Pc = [1.0 / numClusters] * numClusters                                      # probabilities of clusters
+
+    # Pc_x = np.zeros((len(data), numClusters,channel))                         # Initializing probability of c given x
+    Pc_x = np.zeros((len(data), numClusters))                                   # Initializing probability of c given x
     logLikelihood = []
 
     for iter in range(1000):
         ######################################################
                   # E Step
         ######################################################
-        for i in range(numClusters):
-            Pc_x[:,i]= []
-            for j in range(dim):
-              Pc_x.append(c[i] * gaussian(data[j,:], u[i], cov[i]))
-     
-        print(Pc_x[0,0])
+        for i in range(len(data)):
+            for c in range(numClusters):
+                Pc_x[i,c] = Pc[c]*gaussian(data[i,:],u[c],cov[c])
+
+
         normalize = np.sum(Pc_x, axis=1)
-        # Pc_x = Pc_x / normalize[:, np.newaxis]
+        Pc_x = Pc_x / normalize[:, np.newaxis]
 
         #####################################################
                  # M Step
         #####################################################
-        # m_c = np.sum(Pc_x, axis=0)
+        m_c = np.sum(Pc_x, axis=0)
 
         # Probabilities of clusters
-        # Pc = m_c / np.sum(m_c)
+        Pc = m_c / np.sum(m_c)
 
         # New mean
-        # u = np.sum(data[:, np.newaxis] * Pc_x, axis=0) / m_c
+        for i in range(numClusters):
+            for j in range(len(data)):
+                u[i] += Pc_x[j,i]*data[j,:]
+            u[i] = u[i]/m_c
 
         # Variance
-        # for i in range(numClusters):
-            # cov[i] = np.dot((Pc_x[:, i] * (data - u[i])).T, data - u[i]) / m_c[i]
+        for j in range(numClusters):
+            for i in range(len(data)):
+                cov[j] += (Pc_x[i, j] * np.dot((data[i,:] - u[j]), (data[i,:] - u[j]).T))
+            cov[j] = cov[j]/m_c
 
-        # logLikelihood.append(np.sum(np.log(normalize)))
-        # if len(logLikelihood) >= 2:
-            # if abs(logLikelihood[-1] - logLikelihood[-2] < 0.001):
-                # break
+        logLikelihood.append(np.sum(np.log(normalize)))
+        if len(logLikelihood) >= 2:
+            if abs(logLikelihood[-1] - logLikelihood[-2] < 0.001):
+                break
 
-    # return u, np.sqrt(cov), Pc
+    return u,cov,Pc
+
 
 
 if __name__ == '__main__':
