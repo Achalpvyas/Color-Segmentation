@@ -11,7 +11,7 @@ The expectation maximization algorithm is used to find out the mean, variances a
 
 # Result:
 
-Output video showing detection of orange buoys.
+Output video showing detection of green buoys.
 
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/55011289/78616251-bef29e00-7841-11ea-928a-f6ff94a33482.gif">
