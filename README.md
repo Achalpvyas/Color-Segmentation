@@ -9,6 +9,14 @@ In this project, we have implemented an approach for robust color segmentation w
 # Expectation-Maximization Algorithm
 The expectation maximization algorithm is used to find out the mean, variances and weights in the of the different Gaussian Models that represent the buoys in the training images.
 
+The GMM is represented by -
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{formula}
+    \caption{1-D Gaussian Distribution formula}
+    \label{fig:1-D Gaussian Distribution formula}
+\end{figure}
 
 # Run the code
 
