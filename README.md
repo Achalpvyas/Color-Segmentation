@@ -18,15 +18,18 @@ The GMM is represented by -
 
 Enter the following to run the code.
 
+For green buoy:
 ```
-python3 
-em.py
-detectbuoygreen.py
+python3 detectbuoygreen.py
+```
+For orange buoy:
+```
 detectbuoyorange.py
-detectbuoyyellow.py
-mulgaussiandetect.py
 ```
-
+For yellow buoy:
+```
+detectbuoyyellow.py
+```
 
 # Result:
 
