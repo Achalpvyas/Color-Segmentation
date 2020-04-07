@@ -11,12 +11,8 @@ The expectation maximization algorithm is used to find out the mean, variances a
 
 The GMM is represented by -
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=6cm]{formula}
-    \caption{1-D Gaussian Distribution formula}
-    \label{fig:1-D Gaussian Distribution formula}
-\end{figure}
+![formula](https://user-images.githubusercontent.com/55011289/78617418-42fa5500-7845-11ea-8a30-8ccb30af6863.png)
+
 
 # Run the code
 
