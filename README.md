@@ -17,12 +17,17 @@ Output video showing detection of orange buoys.
   <img width="460" height="300" src="https://user-images.githubusercontent.com/55011289/78616251-bef29e00-7841-11ea-928a-f6ff94a33482.gif">
 </p>
 
-![3vnmw1](https://user-images.githubusercontent.com/55011289/78616251-bef29e00-7841-11ea-928a-f6ff94a33482.gif)
 
 Output video showing detection of orange buoys. 
 
-![3vnm9f](https://user-images.githubusercontent.com/55011289/78616035-1ba18900-7841-11ea-8324-b5b94c8646e6.gif)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/55011289/78616035-1ba18900-7841-11ea-8324-b5b94c8646e6.gif">
+</p>
+
 
 Output video showing detection of yellow buoys. 
 
-![3vnkz9](https://user-images.githubusercontent.com/55011289/78615701-3a535000-7840-11ea-8ae6-ae6d87a3639f.gif)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/55011289/78615701-3a535000-7840-11ea-8ae6-ae6d87a3639f.gif">
+</p>
+
