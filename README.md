@@ -11,6 +11,10 @@ The expectation maximization algorithm is used to find out the mean, variances a
 
 # Result:
 
+Output video showing detection of orange buoys. 
 
-Output video showing detection of yellow buoys 
+https://github.com/mesneym/Color-Segmentation/edit/master/README.md
+
+Output video showing detection of yellow buoys. 
+
 ![3vnkz9](https://user-images.githubusercontent.com/55011289/78615701-3a535000-7840-11ea-8ae6-ae6d87a3639f.gif)
